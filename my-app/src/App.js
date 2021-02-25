@@ -1,16 +1,18 @@
-import React,{useEffect, useState} from 'react';
-
+import React from "react";
+import {Route,Switch} from 'react-router-dom';
+import About from './About';
+import Error from './Error';
+import Contact from './Contact';
+   
 const App=()=>{
-  const [num, setNum]=useState(0);
-  const [nums, setNums]=useState(0);
-
-  useEffect(()=>{
-    alert("I am Clicked");
-  },[num]);
   return (
     <>
-      <button onClick={()=>{setNum(num+1)}}>Click Me {num}</button>
-      <button onClick={()=>{setNums(nums+1)}}>Click Me {nums}</button>
+      <Switch>
+        <Route exact path='/'component={About} />
+        <Route path='/contact'component={Contact} />
+        <Route component={Error}/>
+      </Switch>
+       
     </>
   );
 };
