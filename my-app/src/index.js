@@ -9,8 +9,8 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <Hooks />
-    <Hooks1 />
+    {/* <Hooks />
+    <Hooks1 /> */}
     
   </React.StrictMode>,
   document.getElementById('root')

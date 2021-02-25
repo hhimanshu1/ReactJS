@@ -1,17 +1,18 @@
-import CompA from './CompA';
-import {React, createContext } from 'react';
-const FirstName=createContext();
+import React,{useEffect, useState} from 'react';
 
+const App=()=>{
+  const [num, setNum]=useState(0);
+  const [nums, setNums]=useState(0);
 
- const App=()=>{
-   return (
-     <>
-   <FirstName.Provider value={"Hemant"}>
-     <CompA />
-   </FirstName.Provider>
-   </>
-   );
- };
+  useEffect(()=>{
+    alert("I am Clicked");
+  },[num]);
+  return (
+    <>
+      <button onClick={()=>{setNum(num+1)}}>Click Me {num}</button>
+      <button onClick={()=>{setNums(nums+1)}}>Click Me {nums}</button>
+    </>
+  );
+};
 
 export default App;
-export {FirstName};
