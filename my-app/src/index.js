@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import Hooks from './hooks'
 import Hooks1 from './hooks1'
+import Comp from './Comp'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <Comp />
     {/* <Hooks />
     <Hooks1 /> */}
     
@@ -16,7 +18,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+ 
 reportWebVitals();
