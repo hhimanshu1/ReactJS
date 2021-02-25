@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import CompA from './CompA';
+import {React, createContext } from 'react';
+const FirstName=createContext();
 
-function App(props) {
-  return (
+
+ const App=()=>{
+   return (
      <>
-    <div className="cards">
-    <div className="card">
-    <img src={props.imgsrc} alt="mypic" className="card_img" />
-    <div className="card_info">
-      <span className="card_category">{props.title}</span>
-      <h3 className="card_title">{props.sname}</h3>
-      <a href={props.link} target="_blank">
-        <button>Watch now</button>
-      </a>
-    </div>
-    </div>
-    </div>
-     </>
-  );
-}
+   <FirstName.Provider value={"Hemant"}>
+     <CompA />
+   </FirstName.Provider>
+   </>
+   );
+ };
 
 export default App;
+export {FirstName};
