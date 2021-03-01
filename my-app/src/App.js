@@ -5,7 +5,8 @@ import Error from './Error';
 import Contact from './Contact';
 import Services from './Services';
 import Navbar from './Navbar';
-import User from './User'
+import User from './User';
+import Search from './Search';
    
 const App=()=>{
   return (
@@ -15,6 +16,7 @@ const App=()=>{
         <Route exact path='/'component={()=><About name="About"/>} />
         <Route exact path='/contact' render={()=><Contact name="Contact"/>} />
         <Route exact path='/services'component={Services} />
+        <Route exact path='/search'component={Search} />
         <Route path="/user/:fname/:lname" component={User}/>
         <Route component={Error} />
       </Switch>
