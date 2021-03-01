@@ -1,5 +1,5 @@
 import React from "react";
-import {Route,Switch} from 'react-router-dom';
+import {Route,Switch, Redirect} from 'react-router-dom';
 import About from './About';
 import Error from './Error';
 import Contact from './Contact';
@@ -18,7 +18,8 @@ const App=()=>{
         <Route exact path='/services'component={Services} />
         <Route exact path='/search'component={Search} />
         <Route path="/user/:fname/:lname" component={User}/>
-        <Route component={Error} />
+        {/* <Route component={Error} /> */}
+        <Redirect to="/" />
       </Switch>
        
     </>
